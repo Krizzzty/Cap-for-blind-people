@@ -15,7 +15,7 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-cap = cv2.VideoCapture('WhatsApp.mp4')
+cap = cv2.VideoCapture(0)
 #address='http://10.10.173.157:8080/video'
 #cap.open(address)
 cap.set(3,1280)
