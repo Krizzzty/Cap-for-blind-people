@@ -1,7 +1,6 @@
 import cv2
 import pyttsx3
 import numpy as np
-import pytesseract
 
 # Thresholds
 object_threshold = 0.6  # Threshold to detect objects
@@ -32,7 +31,6 @@ with open(classFile, 'rt') as f:
 
 configPath = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
 weightsPath = 'frozen_inference_graph.pb'
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 net = cv2.dnn_DetectionModel(weightsPath, configPath)
 net.setInputSize(240, 240)
 net.setInputScale(1.0 / 127.5)
